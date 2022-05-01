@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bug Search</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+	<section class="menu">
+		<p class="menu__choice">Выберите уровень сложности:</p>
+		<p class="menu__text">
+			<span>Выберите сложность и игра начнется.</span>
+			Чем выше уровень - тем больше будет выборка карт.
+		</p>
+		<ul class="menu__level-list">
+			<li class="level__easy" data-value="3">Простой</li>
+			<li class="level__intermediate" data-value="6">Средний</li>
+			<li class="level__difficult" data-value="10">Сложный</li>
+		</ul>
+		<div class="game-start">
+			<button class="start__button">Начать игру</button>
+			<div class="start__cards">
+				<div class="card-one"></div>
+				<div class="card-two"></div>
+			</div>
+		</div>
+	</section>
+	<section class="card-container"></section>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
