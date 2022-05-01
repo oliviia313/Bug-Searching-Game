@@ -1,137 +1,137 @@
 body {
-    background: url(images/Background.png) no-repeat scroll center center;
-    margin: 0 auto;
-    min-height: 100vh;
-    font-family: Roboto, sans-serif;
-    contain: content;
-    background-size: cover;
+  background: url(images/Background.png) no-repeat scroll center center;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: Roboto, sans-serif;
+  contain: content;
+  background-size: cover;
 }
 
 .menu {
-    color: #fff;
-    width: 90vw;
-    height: 80vh;
-    margin: 13vh 0 0 7.3vw;
+  color: #fff;
+  width: 90vw;
+  height: 80vh;
+  margin: 13vh 0 0 7.3vw;
 }
 
 .menu__choice {
-    font-weight: 700;
-    font-size: 5.6vh;
-    line-height: 6vh;
-    margin: 0;
-    letter-spacing: 0.01em;
+  font-weight: 700;
+  font-size: 5.6vh;
+  line-height: 6vh;
+  margin: 0;
+  letter-spacing: 0.01em;
 }
 
 .menu__text {
-    font-weight: 400;
-    font-size: 1.9vh;
-    margin-top: 8px;
+  font-weight: 400;
+  font-size: 1.9vh;
+  margin-top: 8px;
 }
 
 .menu__text span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .menu__level-list {
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 5vh;
-    letter-spacing: 0.01em;
-    line-height: 5.9vh;
-    list-style: none;
-    margin: 6vh 0 0 0;
-    padding: 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 5vh;
+  letter-spacing: 0.01em;
+  line-height: 5.9vh;
+  list-style: none;
+  margin: 6vh 0 0 0;
+  padding: 0;
 }
 
 .menu__level-list li {
-    margin-bottom: 2.3vh;
-    padding-left: 3.2vw;
-    position: relative;
+  margin-bottom: 2.3vh;
+  padding-left: 3.2vw;
+  position: relative;
 }
 
 .menu__level-list li:hover {
-    color: #d62b2e;
+  color: #d62b2e;
 }
 
 .game-start {
-    display: flex;
-    justify-content: space-between;
-    width: 90vw;
-    height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  height: 40vh;
 }
 
 .start__button {
-    cursor: pointer;
-    width: 24.3vw;
-    background-color: #d62b2e;
-    border-radius: 7px;
-    color: inherit;
-    font-weight: 700;
-    font-size: 3vh;
-    height: 9vh;
-    margin-top: 9vh;
+  cursor: pointer;
+  width: 24.3vw;
+  background-color: #d62b2e;
+  border-radius: 7px;
+  color: inherit;
+  font-weight: 700;
+  font-size: 3vh;
+  height: 9vh;
+  margin-top: 9vh;
 }
 
 .start__cards {
-    display: flex;
-    width: 38vw;
-    position: relative;
+  display: flex;
+  width: 38vw;
+  position: relative;
 }
 
 .card-one,
 .card-two {
-    background: url(images/cardback.png) center center no-repeat;
-    background-size: 100% 100%;
-    height: 33vh;
-    width: 15vw;
-    position: absolute;
+  background: url(images/cardback.png) center center no-repeat;
+  background-size: 100% 100%;
+  height: 33vh;
+  width: 15vw;
+  position: absolute;
 }
 
 .card-one {
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
-    transform: rotate(11.9deg);
-    bottom: 7vh;
-    left: 3vw;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+  transform: rotate(11.9deg);
+  bottom: 7vh;
+  left: 3vw;
 }
 
 .card-two {
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-2px 0 1px rgba(0, 0, 0, 0.3));
-    transform: rotate(39.26deg);
-    bottom: 6vh;
-    left: 15vw;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-2px 0 1px rgba(0, 0, 0, 0.3));
+  transform: rotate(39.26deg);
+  bottom: 6vh;
+  left: 15vw;
 }
 
 .active {
-    color: #d62b2e;
+  color: #d62b2e;
 }
 
 .active::before {
-    background-size: contain;
-    content: url(images/marker.png);
-    left: 0;
-    position: absolute;
+  background-size: contain;
+  content: url(images/marker.png);
+  left: 0;
+  position: absolute;
 }
 
 .card-container {
-    display: none;
-    margin: 15vh auto;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    height: 70vh;
-    flex-wrap: wrap;
-    width: 51.7vw;
-   perspective: 1000px;
+  display: none;
+  margin: 15vh auto;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 70vh;
+  flex-wrap: wrap;
+  width: 51.7vw;
+  perspective: 1000px;
 }
 
 .playing-card {
-    background: url(images/cardback.png) no-repeat;
-    background-size: 100% 100%;
-    cursor: pointer;
-    height: 33vh;
-    width: 15vw;
-    transform-style: preserve-3d;
-    transition: transform .3s;
+  background: url(images/cardback.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  height: 33vh;
+  width: 15vw;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
 }
 
 .hover-three:hover {
@@ -158,21 +158,23 @@ body {
 
 @media (max-width: 992px) {
 
-	.card-one, .card-two, .playing-card {
+	.card-one,
+  .card-two,
+  .playing-card {
 		height: 19vh;
-    	width: 20vw;
+    width: 20vw;
 	}
 	.card-one {
 		bottom: 16vh;
-    	left: -5vw;
+    left: -5vw;
 	}
 	.card-two {
-    	bottom: 16vh;
-    	left: 6vw;
+    bottom: 16vh;
+    left: 6vw;
 	}
 	.start__button {
-    	width: 37.3vw;
-    }
+    width: 37.3vw;
+  }
 }
 
 @media (max-width: 767px) {
@@ -180,27 +182,31 @@ body {
 	.active::before {
 		left: -17px;
 	}
-	.card-one, .card-two, .playing-card {
+	.card-one,
+  .card-two,
+  .playing-card {
 		height: 14vh;
 		width: 20vw;
 	}
 	.card-container {
-	    width: 77.7vw;
+	  width: 77.7vw;
 	}
 }
 
 @media (aspect-ratio: 3/4) {
 	
-	.card-one, .card-two, .playing-card {
+	.card-one,
+  .card-two,
+  .playing-card {
 		height: 19vh;
-    	width: 19vw;
+    width: 19vw;
 	}
 	.card-one {
 		bottom: 13vh;
-    	left: -5vw;
+    left: -5vw;
 	}
 	.card-two {
-    	bottom: 12vh;
-    	left: 6vw;
+    bottom: 12vh;
+    left: 6vw;
 	}
 }
