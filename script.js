@@ -29,7 +29,7 @@ button.addEventListener("click", function () {
       createCards(value);
       if (value === 10) {
         cardContainer.style.width = "90vw";
-      };
+      }
 
       let cards = document.querySelectorAll(".playing-card");
 
@@ -57,13 +57,13 @@ button.addEventListener("click", function () {
       };
 
       let clickCounter = 0;
-      
+
       cards.forEach((item) => item.addEventListener("click", () => {
-        disableCards();       
+        disableCards();
         clickCounter++;
-        if (clickCounter === 2) {      
+        if (clickCounter === 2) {
           setTimeout(() => window.location.reload(), 700);
-         };
+        };
       }));
     };
   };

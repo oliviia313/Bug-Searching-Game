@@ -151,7 +151,7 @@ body {
 }
 
 .playing-card.bugFlip {
-	transform: rotateY(180deg) scale(-1, 1);
+  transform: rotateY(180deg) scale(-1, 1);
   background: url(images/bugcard.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -167,12 +167,12 @@ body {
   .card-one {
     bottom: 16vh;
     left: -5vw;
-	}
+  }
 
   .card-two {
     bottom: 16vh;
     left: 6vw;
-	}
+  }
 
   .start__button {
     width: 37.3vw;
@@ -182,35 +182,35 @@ body {
 @media (max-width: 767px) {
   .active::before {
     left: -17px;
-	}
+  }
 
   .card-one,
   .card-two,
   .playing-card {
     height: 14vh;
     width: 20vw;
-	}
+  }
 
   .card-container {
       width: 77.7vw;
-	}
+  }
 }
 
 @media (aspect-ratio: 3/4) {
-	.card-one,
+  .card-one,
   .card-two,
   .playing-card {
-		height: 19vh;
+    height: 19vh;
     width: 19vw;
   }
 
   .card-one {
     bottom: 13vh;
     left: -5vw;
-	}
+  }
 
   .card-two {
     bottom: 12vh;
     left: 6vw;
-	}
+  }
 }
