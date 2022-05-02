@@ -39,7 +39,7 @@ button.addEventListener("click", function () {
 
       function flipCard() {
         this.classList.add("flip");
-      };
+      }
       cards.forEach((item) => item.addEventListener("click", flipCard));
       let bugCard = cards[Math.floor(Math.random() * value)];
       function flipBugCard () {
@@ -57,11 +57,11 @@ button.addEventListener("click", function () {
       };
 
       let clickCounter = 0;
-
+      
       cards.forEach((item) => item.addEventListener("click", () => {
         disableCards();
         clickCounter++;
-        if (clickCounter === 2) {
+        if (clickCounter === 2) {          
           setTimeout(() => window.location.reload(), 700);
         };
       }));
