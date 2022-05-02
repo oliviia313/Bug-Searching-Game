@@ -45,7 +45,7 @@ button.addEventListener("click", function () {
       function flipBugCard () {
         bugCard.classList.add("bugFlip");
         bugCard.classList.remove("flip");
-      };
+      }
 
       bugCard.addEventListener("click", flipBugCard);
 
@@ -57,7 +57,7 @@ button.addEventListener("click", function () {
       };
 
       let clickCounter = 0;
-      
+
       cards.forEach((item) => item.addEventListener("click", () => {
         disableCards();
         clickCounter++;
