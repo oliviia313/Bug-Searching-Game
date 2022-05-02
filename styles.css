@@ -140,12 +140,12 @@ body {
 }
 
 .hover-many:hover {
-	filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
   transform: rotate(0deg) translateY(-22px);
 }
 
 .playing-card.flip {
-	transform: rotateY(180deg) scale(-1, 1);
+  transform: rotateY(180deg) scale(-1, 1);
   background: url(images/gameover.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -153,19 +153,19 @@ body {
 .playing-card.bugFlip {
 	transform: rotateY(180deg) scale(-1, 1);
   background: url(images/bugcard.png) no-repeat;
-	background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 @media (max-width: 992px) {
   .card-one,
   .card-two,
   .playing-card {
-		height: 19vh;
+    height: 19vh;
     width: 20vw;
-	}
+  }
 
   .card-one {
-  bottom: 16vh;
+    bottom: 16vh;
     left: -5vw;
 	}
 
@@ -183,7 +183,8 @@ body {
   .active::before {
     left: -17px;
 	}
-	.card-one,
+
+  .card-one,
   .card-two,
   .playing-card {
     height: 14vh;
@@ -201,12 +202,14 @@ body {
   .playing-card {
 		height: 19vh;
     width: 19vw;
-	}
-	.card-one {
+  }
+
+  .card-one {
     bottom: 13vh;
     left: -5vw;
 	}
-	.card-two {
+
+  .card-two {
     bottom: 12vh;
     left: 6vw;
 	}

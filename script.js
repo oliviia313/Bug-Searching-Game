@@ -2,8 +2,8 @@ let levels = document.querySelectorAll(".menu__level-list li");
 levels.forEach((item) =>
   item.addEventListener("click", function () {
     for (let i = 0; i < levels.length; i++) {
-      levels[i].classList.remove("active")
-      item.classList.add("active")
+      levels[i].classList.remove("active");
+      item.classList.add("active");
     }
   })
 );
@@ -18,7 +18,7 @@ function createCards(value) {
     div.classList.add("playing-card");
     cardContainer.append(div);
   }
-};
+}
 
 button.addEventListener("click", function () {
   for (let e = 0; e < levels.length; e++) {
@@ -31,11 +31,11 @@ button.addEventListener("click", function () {
         cardContainer.style.width = "90vw";
       };
 
-      let cards = document.querySelectorAll("playing-card");   
+      let cards = document.querySelectorAll(".playing-card");
 
-      (value === 3)
-      ? cards.forEach((item) => item.classList.add("hover-three"))
-      : cards.forEach((item) => item.classList.add("hover-many")); // в макете разные ховеры для экранов на 3 карты и н 6-10 карт
+      value === 3
+        ? cards.forEach((item) => item.classList.add("hover-three"))
+        : cards.forEach((item) => item.classList.add("hover-many")); // в макете разные ховеры для экранов на 3 карты и н 6-10 карт
 
       function flipCard() {
         this.classList.add("flip");
@@ -52,19 +52,19 @@ button.addEventListener("click", function () {
       function disableCards() {
         cards.forEach((item) => item.removeEventListener("click", flipCard));
         bugCard.removeEventListener("click", flipBugCard);
-        cards.forEach((item) => item.classList.remove("hover-three")); 
+        cards.forEach((item) => item.classList.remove("hover-three"));
         cards.forEach((item) => item.classList.remove("hover-many"));
       };
 
       let clickCounter = 0;
+      
       cards.forEach((item) => item.addEventListener("click", () => {
         disableCards();       
         clickCounter++;
-        if (clickCounter === 2) {              
+        if (clickCounter === 2) {      
           setTimeout(() => window.location.reload(), 700);
-        };        
+         };
       }));
     };
   };
-
 });
