@@ -20,49 +20,59 @@ function createCards(value) {
   }
 }
 
-button.addEventListener("click", function () {
+function flipCard() {
+  this.classList.add("flip");
+}
+
+function flipBugCard () {
+  this.classList.add("bugFlip");
+  this.classList.remove("flip");
+}
+
+function disableCards(cards, bugCard) {
+  cards.forEach((item) => item.removeEventListener("click", flipCard));
+  bugCard.removeEventListener("click", flipBugCard);
+  cards.forEach((item) => item.classList.remove("hover-three"));
+  cards.forEach((item) => item.classList.remove("hover-many"));
+};
+
+button.addEventListener("click", function Game () {
   for (let e = 0; e < levels.length; e++) {
     if (levels[e].classList.contains("active")) {
       menu.style.display = "none";
-      cardContainer.style.display = "flex";
+      cardContainer.style.display = "flex";      
       let value = parseInt(levels[e].dataset.value, 10);
       createCards(value);
       if (value === 10) {
-        cardContainer.style.width = "90vw";
+        cardContainer.classList.add("container-ten");
       }
 
       let cards = document.querySelectorAll(".playing-card");
 
-      value === 3
-        ? cards.forEach((item) => item.classList.add("hover-three"))
-        : cards.forEach((item) => item.classList.add("hover-many")); // в макете разные ховеры для экранов на 3 карты и н 6-10 карт
+      if (value === 3) {
+          cards.forEach((item) => item.classList.add("hover-three"));
+          cardContainer.classList.add("container-three");
+        } else {
+          cards.forEach((item) => item.classList.add("hover-many"));
+        }; // в макете разные ховеры для экранов на 3 карты и на 6-10 карт
 
-      function flipCard() {
-        this.classList.add("flip");
-      }
       cards.forEach((item) => item.addEventListener("click", flipCard));
       let bugCard = cards[Math.floor(Math.random() * value)];
-      function flipBugCard () {
-        bugCard.classList.add("bugFlip");
-        bugCard.classList.remove("flip");
-      }
-
+      
       bugCard.addEventListener("click", flipBugCard);
-
-      function disableCards() {
-        cards.forEach((item) => item.removeEventListener("click", flipCard));
-        bugCard.removeEventListener("click", flipBugCard);
-        cards.forEach((item) => item.classList.remove("hover-three"));
-        cards.forEach((item) => item.classList.remove("hover-many"));
-      };
 
       let clickCounter = 0;
 
       cards.forEach((item) => item.addEventListener("click", () => {
-        disableCards();
+        disableCards(cards, bugCard);
         clickCounter++;
         if (clickCounter === 2) {          
-          setTimeout(() => window.location.reload(), 700);
+          setTimeout(() => {
+            cardContainer.innerHTML = ""
+            menu.style.display = "block";
+            cardContainer.style.display = "none";
+            levels.forEach((item) => item.classList.remove("active"));
+          }, 700);         
         };
       }));
     };
