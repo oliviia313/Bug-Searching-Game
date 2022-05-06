@@ -9,9 +9,9 @@ body {
 
 .menu {
   color: #fff;
-  width: 90vw;
-  height: 80vh;
-  margin: 13vh 0 0 7.3vw;
+  /*width: 90vw;
+  height: 80vh;*/
+  padding: 13vh 0 0 7.3vw;
 }
 
 .menu__choice {
@@ -67,11 +67,11 @@ body {
   border-radius: 7px;
   border-width: 0;
   color: #fff;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   font-weight: 700;
   font-size: 3vh;
-  height: 9vh;
-  margin-top: 9vh;
+  height: 10vh;
+  margin-top: 8vh;
 }
 
 .start__cards {
@@ -84,23 +84,29 @@ body {
 .card-two {
   background: url(images/cardback.png) center center no-repeat;
   background-size: 100% 100%;
-  height: 33vh;
-  width: 15vw;
+  /* height: 33vh;
+  width: 15vw; */
+  height: calc(341 / 1024 * 100%);
+  width: calc(218 / 1440 * 100%);
   position: absolute;
 }
 
 .card-one {
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
   transform: rotate(11.9deg);
-  bottom: 7vh;
-  left: 3vw;
+  /*bottom: 8vh;
+  left: 2.6vw;*/
+  bottom: 15vh;
+  right: 23vw;
 }
 
 .card-two {
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-2px 0 1px rgba(0, 0, 0, 0.3));
   transform: rotate(39.26deg);
-  bottom: 6vh;
-  left: 15vw;
+  /*bottom: 6vh;
+  left: 15vw;*/
+  bottom: 13vh;
+  right: 10.7vw;
 }
 
 .active {
@@ -125,6 +131,7 @@ body {
   width: 51.7vw;
   perspective: 1000px;
 }
+
 .container-ten {
   width: 90vw;
 }
@@ -133,8 +140,10 @@ body {
   background: url(images/cardback.png) no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
-  height: 33vh;
-  width: 15vw;
+  /* height: 33vh;
+  width: 15vw; */
+  height: calc(1024px * 0.33);
+  width: calc(1440px * 0.15);
   transform-style: preserve-3d;
   transition: transform 0.3s;
 }
@@ -166,12 +175,12 @@ body {
       width: 67%;
     } */
 
-  .card-one,
+  /* .card-one,
   .card-two,
   .playing-card {
     height: 19vh;
     width: 20vw;
-  }
+  } */
 
   .card-one {
     bottom: 16vh;
@@ -189,36 +198,33 @@ body {
 }
 
 @media (max-width: 767px) {
-   .menu {
+  /*.menu {
     margin: 10vh auto;
-  }
+  }*/
 
   .active::before {
     left: -17px;
   }
 
-  /* .card-container {
-    flex-direction: column;
-  } */
   .container-three {
     flex-direction: column;
   }
 
-  .card-one,
+  /*.card-one,
   .card-two,
   .playing-card {
     height: 14vh;
     width: 20vw;
-  }
+  }*/
 }
 
 @media (aspect-ratio: 3/4) {
-  .card-one,
+  /*.card-one,
   .card-two,
   .playing-card {
     height: 19vh;
     width: 19vw;
-  }
+  }*/
 
   .card-one {
     bottom: 13vh;

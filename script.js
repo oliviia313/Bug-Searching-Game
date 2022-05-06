@@ -24,7 +24,7 @@ function flipCard() {
   this.classList.add("flip");
 }
 
-function flipBugCard () {
+function flipBugCard() {
   this.classList.add("bugFlip");
   this.classList.remove("flip");
 }
@@ -34,13 +34,13 @@ function disableCards(cards, bugCard) {
   bugCard.removeEventListener("click", flipBugCard);
   cards.forEach((item) => item.classList.remove("hover-three"));
   cards.forEach((item) => item.classList.remove("hover-many"));
-};
+}
 
-button.addEventListener("click", function Game () {
+button.addEventListener("click", function () {
   for (let e = 0; e < levels.length; e++) {
     if (levels[e].classList.contains("active")) {
       menu.style.display = "none";
-      cardContainer.style.display = "flex";      
+      cardContainer.style.display = "flex"; 
       let value = parseInt(levels[e].dataset.value, 10);
       createCards(value);
       if (value === 10) {
@@ -50,31 +50,35 @@ button.addEventListener("click", function Game () {
       let cards = document.querySelectorAll(".playing-card");
 
       if (value === 3) {
-          cards.forEach((item) => item.classList.add("hover-three"));
-          cardContainer.classList.add("container-three");
-        } else {
-          cards.forEach((item) => item.classList.add("hover-many"));
-        }; // в макете разные ховеры для экранов на 3 карты и на 6-10 карт
+        cards.forEach((item) => item.classList.add("hover-three"));
+        cardContainer.classList.add("container-three");
+      } else {
+        cards.forEach((item) => item.classList.add("hover-many"));
+      } // в макете разные ховеры для экранов на 3 карты и на 6-10 карт
 
       cards.forEach((item) => item.addEventListener("click", flipCard));
       let bugCard = cards[Math.floor(Math.random() * value)];
-      
+
       bugCard.addEventListener("click", flipBugCard);
 
       let clickCounter = 0;
 
-      cards.forEach((item) => item.addEventListener("click", () => {
-        disableCards(cards, bugCard);
-        clickCounter++;
-        if (clickCounter === 2) {          
-          setTimeout(() => {
-            cardContainer.innerHTML = ""
-            menu.style.display = "block";
-            cardContainer.style.display = "none";
-            levels.forEach((item) => item.classList.remove("active"));
-          }, 700);         
-        };
-      }));
+      cards.forEach((item) =>
+        item.addEventListener("click", () => {
+          disableCards(cards, bugCard);
+          clickCounter++;
+          if (clickCounter === 2) {
+            setTimeout(() => {
+              cardContainer.innerHTML = "";
+              cardContainer.className = "card-container";
+              cardContainer.style.display = "none";
+              menu.style.display = "block";         
+              levels.forEach((item) => item.classList.remove("active"));
+            }, 700
+            );         
+          };
+        })
+      );
     };
   };
 });
