@@ -40,7 +40,7 @@ button.addEventListener("click", function () {
   for (let e = 0; e < levels.length; e++) {
     if (levels[e].classList.contains("active")) {
       menu.style.display = "none";
-      cardContainer.style.display = "flex"; 
+      cardContainer.style.display = "flex";
       let value = parseInt(levels[e].dataset.value, 10);
       createCards(value);
       if (value === 10) {
@@ -72,11 +72,10 @@ button.addEventListener("click", function () {
               cardContainer.innerHTML = "";
               cardContainer.className = "card-container";
               cardContainer.style.display = "none";
-              menu.style.display = "block";         
+              menu.style.display = "block";   
               levels.forEach((item) => item.classList.remove("active"));
-            }, 700
-            );         
-          };
+            },  700);     
+          }
         })
       );
     };
