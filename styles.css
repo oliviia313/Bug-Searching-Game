@@ -180,17 +180,18 @@ body {
 
   .container-ten {
   width: 90vw;
+  align-items: flex-start;
   }
 
   .playing-card {
-    height: 19vh;
+    height: 22vh;
     width: 20vw;
   }
 
-  .hover-three {
+  /*.hover-three {
     height: 30vh;
     width: 22vw;
-  }
+  }*/
 
   .card-one {
     /*bottom: 16vh;
@@ -239,29 +240,29 @@ body {
   /*.card-one,
   .card-two,*/
   .playing-card {
-    height: 14vh;
-    width: 20vw;
+    height: 18vh;
+    width: 22vw;
     /*flex-basis: 14.1vh;*/
   }
 
-  .hover-three {
+  /*.hover-three {
     height: 26vh;
     width: 22vw;
-  }
+  }*/
 }
 
 @media (aspect-ratio: 3/4) {
   /*.card-one,
   .card-two,*/
   .playing-card {
-    height: 19vh;
+    height: 24vh;
     width: 19vw;
   }
 
-  .hover-three {
+  /*.hover-three {
     height: 27vh;
     width: 22vw;
-  }
+  }*/
 
   /*.card-one {
     bottom: 13vh;
