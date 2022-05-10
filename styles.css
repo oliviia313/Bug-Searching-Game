@@ -128,7 +128,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 24px;
-  height: 70vh;
+  min-height: 70vh;
   width: 51.7vw;
   margin: auto;
   padding: 15vh 0;
@@ -174,13 +174,22 @@ body {
 }
 
 @media (max-width: 992px) {
-    /* .card-container {
-      width: 67%;
-    } */
+  .card-container {
+    width: 73vw;
+  }
+
+  .container-ten {
+  width: 90vw;
+  }
 
   .playing-card {
     height: 19vh;
     width: 20vw;
+  }
+
+  .hover-three {
+    height: 30vh;
+    width: 22vw;
   }
 
   .card-one {
@@ -234,6 +243,11 @@ body {
     width: 20vw;
     /*flex-basis: 14.1vh;*/
   }
+
+  .hover-three {
+    height: 26vh;
+    width: 22vw;
+  }
 }
 
 @media (aspect-ratio: 3/4) {
@@ -242,6 +256,11 @@ body {
   .playing-card {
     height: 19vh;
     width: 19vw;
+  }
+
+  .hover-three {
+    height: 27vh;
+    width: 22vw;
   }
 
   /*.card-one {
