@@ -52,13 +52,13 @@ button.addEventListener("click", function () {
       if (value === 3) {
         cards.forEach((item) => item.classList.add("hover-three"));
         cardContainer.classList.add("container-three");
-      } 
+      }
       if (value === 6) {
         cardContainer.classList.add("container-six");
       }
       else {
         cards.forEach((item) => item.classList.add("hover-many"));
-      } // в макете разные ховеры для экранов на 3 карты и на 6-10 карт
+      }
 
       cards.forEach((item) => item.addEventListener("click", flipCard));
       let bugCard = cards[Math.floor(Math.random() * value)];
@@ -76,12 +76,12 @@ button.addEventListener("click", function () {
               cardContainer.innerHTML = "";
               cardContainer.className = "card-container";
               cardContainer.style.display = "none";
-              menu.style.display = "block";   
+              menu.style.display = "block"; 
               levels.forEach((item) => item.classList.remove("active"));
-            },  700);     
+            },700);
           }
         })
       );
-    };
+    }
   };
 });
