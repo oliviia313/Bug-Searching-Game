@@ -213,7 +213,7 @@ body {
   }
 
   .container-six {
-    min-height: 50vh;    
+    min-height: 50vh;
     padding-top: 19vh;
   }
 
@@ -225,7 +225,7 @@ body {
 
 @media (aspect-ratio: 3/4) {
   .container-six {
-    min-height: 50vh;    
+    min-height: 50vh;
     padding-top: 23vh;
   }
 
@@ -233,17 +233,16 @@ body {
     height: 24vh;
     width: 19vw;
   }
-  
 }
+
 @media (max-aspect-ratio: 1/2) {
   .start__button {
     margin-top: 4vh;
   }
-
 }
+
 @media (min-aspect-ratio: 2/1) {
   .card-two {
     right: 16.7vw;
   }
-  
 }
