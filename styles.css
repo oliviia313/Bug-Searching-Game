@@ -163,13 +163,13 @@ body {
 
 .playing-card.flip {
   transform: rotateY(180deg) scale(-1, 1);
-  background: url(images/gameover.png) no-repeat;
+  background: url(images/gameover.png) center no-repeat;
   background-size: contain;;
 }
 
 .playing-card.bugFlip {
   transform: rotateY(180deg) scale(-1, 1);
-  background: url(images/bugcard.png) no-repeat;
+  background: url(images/bugcard.png) center no-repeat;
   background-size: contain;
 }
 
@@ -226,7 +226,7 @@ body {
   }
 
   .card-container {
-    height: 88vh;
+    min-height: 88vh;
     padding-top: 7vh;
   }
 
@@ -235,6 +235,12 @@ body {
     /*flex-wrap: nowrap;
     column-gap: 0;
     padding-top: 10.5vh;*/
+  }
+
+  .container-six {
+    min-height: 50vh;
+    align-items: center;
+    padding-top: 19vh;
   }
 
   /*.card-one,
@@ -252,6 +258,11 @@ body {
 }
 
 @media (aspect-ratio: 3/4) {
+  .container-six {
+    min-height: 50vh;
+    align-items: center;
+    padding-top: 23vh;
+  }
   /*.card-one,
   .card-two,*/
   .playing-card {

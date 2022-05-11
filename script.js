@@ -52,7 +52,11 @@ button.addEventListener("click", function () {
       if (value === 3) {
         cards.forEach((item) => item.classList.add("hover-three"));
         cardContainer.classList.add("container-three");
-      } else {
+      } 
+      if (value === 6) {
+        cardContainer.classList.add("container-six");
+      }
+      else {
         cards.forEach((item) => item.classList.add("hover-many"));
       } // в макете разные ховеры для экранов на 3 карты и на 6-10 карт
 
