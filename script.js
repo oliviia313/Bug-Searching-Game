@@ -55,7 +55,7 @@ button.addEventListener("click", function () {
       }
       if (value === 6) {
         cardContainer.classList.add("container-six");
-     }
+      }
       else {
         cards.forEach((item) => item.classList.add("hover-many"));
       }
@@ -78,7 +78,7 @@ button.addEventListener("click", function () {
               cardContainer.style.display = "none";
               menu.style.display = "block";
               levels.forEach((item) => item.classList.remove("active"));
-            },700);
+            }, 700);
           }
         })
       );
